@@ -4,7 +4,7 @@ Mkrhinit creates a basic [SysV Init](http://en.wikipedia.org/wiki/Sysvinit) scri
 `TODO:` marks places that necessarily require modification in order to turn the stub into a complete init script.
 
 ### Usage
-    # ./mkrhinit [OPTIONS]    
+    # ruby mkrhinit.rb [OPTIONS]
         -p, --program PROGRAM            Program name
         -c, --config [FILE]              Config file
         -l, --levels [LEVELS]            Runlevels
@@ -12,21 +12,21 @@ Mkrhinit creates a basic [SysV Init](http://en.wikipedia.org/wiki/Sysvinit) scri
 
 
 ### Examples
-    # ./mkrhinit --program /usr/bin/appd --config /etc/sysconfig/appd -levels 2345 >> appd
+    # ruby mkrhinit.rb --program /usr/bin/appd --config /etc/sysconfig/appd -levels 2345 >> appd
     # chmod -c +x appd
     # cp -p appd /etc/init.d/
-    # chkconfig --add appd 
+    # chkconfig --add appd
 
 ### Caveat
 The output is a basic version of an init script, which the user can then expand upon. However, this is not an [LSB compliant](http://refspecs.linuxbase.org/LSB_3.1.1/LSB-Core-generic/LSB-Core-generic/iniscrptact.html) stub. This script is designed as a training tool and should only be used in production after configuration and proper testing.
 
-Where compatibility is concerned, most modern versions of any Red Hat-based distribution should suffice as long as SysV init scripts are still supported. RHEL 5 and 6 still use SysV but it is purported that [RHEL 7 will use systemd](http://www.h-online.com/open/slideshow/bilderstrecke_1631968.html?back=1631791;back_page=1;image=5). 
+Where compatibility is concerned, most modern versions of any Red Hat-based distribution should suffice as long as SysV init scripts are still supported. RHEL 5 and 6 still use SysV but it is purported that [RHEL 7 will use systemd](http://www.h-online.com/open/slideshow/bilderstrecke_1631968.html?back=1631791;back_page=1;image=5).
 
 While systemd still provides some compatibility for SysV init, I cannot guarantee that that scripts generated using this script will be supported. **Use at your own risk.**
 
 ## Requirements
 
-**[Ruby](http://www.ruby-lang.org/en/)**  
+**[Ruby](http://www.ruby-lang.org/en/)**
 
 Any of the Red Hat-based distributions. Major ones are listed here for reference:
 
