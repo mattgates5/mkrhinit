@@ -1,9 +1,7 @@
-#!/usr/bin/env ruby
-#
 # mkrhinit
 #   a ruby script for generating sysv init script stubs.
 #   2013 matt gates
-#   
+#
 # this program is free software: you can redistribute it and/or modify
 # it under the terms of the gnu general public license as published by
 # the free software foundation, either version 3 of the license, or
